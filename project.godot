@@ -18,10 +18,6 @@ config/icon="res://icon.svg"
 
 AudioManager="*res://src/Autoloads/AudioManager.gd"
 
-[layer_names]
-
-3d_physics/layer_9="Hurtboxes"
-3d_physics/layer_10="Bullet"
 [input]
 
 rmb={
@@ -39,3 +35,5 @@ shoot={
 
 3d_physics/layer_1="Collision"
 3d_physics/layer_2="Hitbox"
+3d_physics/layer_9="Hurtboxes"
+3d_physics/layer_10="Bullet"
