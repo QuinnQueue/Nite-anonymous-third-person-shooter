@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl4s4wogma4j7"]
+
+[ext_resource type="Script" path="res://src/Scenes/UI/PlayerGUI.gd" id="1_p2fmc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8lx2"]
+bg_color = Color(0.214968, 0.0118601, 1.8049e-08, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nsmpr"]
+bg_color = Color(0.778908, 0.0845865, 0.107251, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Placeholder_Game GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p2fmc")
+
+[node name="MarginContainer" type="MarginContainer" parent="Placeholder_Game GUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Placeholder_Game GUI/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Placeholder_Game GUI/MarginContainer"]
+custom_minimum_size = Vector2(366, 188)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.3
+
+[node name="Placeholder_AmmoLabel" type="Label" parent="Placeholder_Game GUI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Ammo: X / X | Total Ammo: X / X"
+
+[node name="Placeholder_HealthLabel" type="Label" parent="Placeholder_Game GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Health"
+
+[node name="Placeholder_HealthBar" type="ProgressBar" parent="Placeholder_Game GUI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_a8lx2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nsmpr")
+
+[node name="Placeholder_MiscellaneousBar" type="Label" parent="Placeholder_Game GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Miscellaneous Bar
+"
+
+[node name="Placeholder_MiscBar" type="ProgressBar" parent="Placeholder_Game GUI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2

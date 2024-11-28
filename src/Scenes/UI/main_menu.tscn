@@ -1,0 +1,286 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4m616bra45kj"]
+
+[ext_resource type="Script" path="res://src/Scenes/UI/main_menu.gd" id="1_v8627"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n241p"]
+font_size = 128
+outline_size = 10
+outline_color = Color(0.0846899, 0.0846899, 0.0846899, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sv4og"]
+font_size = 32
+
+[node name="Placeholder Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v8627")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.150643, 0.206853, 0.509742, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -253.0
+offset_right = 336.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Nite"
+label_settings = SubResource("LabelSettings_n241p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Placeholder_Button_Holder" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.686
+anchor_right = 0.5
+anchor_bottom = 0.686
+offset_left = -168.0
+offset_top = -170.528
+offset_right = 169.0
+offset_bottom = 170.472
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_group_ = true
+
+[node name="start" type="Button" parent="Placeholder_Button_Holder"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "start"
+
+[node name="options" type="Button" parent="Placeholder_Button_Holder"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "options
+"
+
+[node name="exit" type="Button" parent="Placeholder_Button_Holder"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "exit"
+
+[node name="PLACEHOLDER Options Menu" type="Control" parent="."]
+editor_description = "Each options menu is a child control node under the scene"
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PLACEHOLDER Options Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14902, 0.207843, 0.509804, 1)
+
+[node name="Label" type="Label" parent="PLACEHOLDER Options Menu/ColorRect"]
+layout_mode = 0
+offset_top = 12.0
+offset_right = 1152.0
+offset_bottom = 57.0
+text = "Options
+"
+label_settings = SubResource("LabelSettings_sv4og")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Graphics" type="Control" parent="PLACEHOLDER Options Menu"]
+visible = false
+anchors_preset = 0
+offset_left = 97.0
+offset_top = 57.0
+offset_right = 1099.0
+offset_bottom = 648.0
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="PLACEHOLDER Options Menu/Graphics"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16263, 0.16039, 0.431132, 1)
+
+[node name="Audio" type="Control" parent="PLACEHOLDER Options Menu"]
+anchors_preset = 0
+offset_left = 97.0
+offset_top = 57.0
+offset_right = 1099.0
+offset_bottom = 648.0
+
+[node name="ColorRect2" type="ColorRect" parent="PLACEHOLDER Options Menu/Audio"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16263, 0.16039, 0.431132, 1)
+
+[node name="Sound Sliders" type="HBoxContainer" parent="PLACEHOLDER Options Menu/Audio"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 140.0
+offset_right = 892.0
+offset_bottom = 460.0
+
+[node name="Slider Labels" type="VBoxContainer" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders"]
+layout_mode = 2
+size_flags_horizontal = 3
+metadata/_edit_group_ = true
+
+[node name="Master_Label" type="Label" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels"]
+layout_mode = 2
+size_flags_horizontal = 11
+text = "Master"
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Effects_Label" type="Label" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels"]
+layout_mode = 2
+size_flags_horizontal = 9
+text = "Effects
+"
+horizontal_alignment = 2
+
+[node name="HSeparator2" type="HSeparator" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Music_Label" type="Label" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels"]
+layout_mode = 2
+size_flags_horizontal = 9
+text = "Music
+"
+horizontal_alignment = 2
+
+[node name="HSeparator3" type="HSeparator" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Ambience_Label" type="Label" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels"]
+layout_mode = 2
+size_flags_horizontal = 9
+text = "Ambience"
+horizontal_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels/HBoxContainer3"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Slider Labels/HBoxContainer4"]
+layout_mode = 2
+
+[node name="Sliders" type="VBoxContainer" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.01
+metadata/_edit_group_ = true
+
+[node name="Master Slider" type="HSlider" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders"]
+layout_mode = 2
+size_flags_horizontal = 11
+
+[node name="HSeparator" type="HSeparator" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Effects Slider" type="HSlider" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders"]
+layout_mode = 2
+size_flags_horizontal = 9
+
+[node name="HSeparator2" type="HSeparator" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Music Slider" type="HSlider" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders"]
+layout_mode = 2
+size_flags_horizontal = 9
+
+[node name="HSeparator3" type="HSeparator" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Ambience Slider" type="HSlider" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders"]
+layout_mode = 2
+size_flags_horizontal = 9
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders/HBoxContainer3"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PLACEHOLDER Options Menu/Audio/Sound Sliders/Sliders/HBoxContainer4"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PLACEHOLDER Options Menu/Audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = 136.5
+offset_right = 133.0
+offset_bottom = 187.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+
+[node name="Gameplay" type="Control" parent="PLACEHOLDER Options Menu"]
+visible = false
+anchors_preset = 0
+offset_left = 97.0
+offset_top = 57.0
+offset_right = 1099.0
+offset_bottom = 648.0
+metadata/_edit_group_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="PLACEHOLDER Options Menu/Gameplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16263, 0.16039, 0.431132, 1)
