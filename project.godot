@@ -35,3 +35,7 @@ shoot={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="Collision"
+3d_physics/layer_2="Hitbox"
