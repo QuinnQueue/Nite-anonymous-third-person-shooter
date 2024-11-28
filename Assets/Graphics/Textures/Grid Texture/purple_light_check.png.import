@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://12ryxk45ldc4"
-path.s3tc="res://.godot/imported/purple_light_check.png-66c8c5318204677b82f7a9ec2935e049.s3tc.ctex"
+path.s3tc="res://.godot/imported/purple_light_check.png-e5bc5ea40b4214da9a681fed2d495030.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Grid Texture/purple_light_check.png"
-dest_files=["res://.godot/imported/purple_light_check.png-66c8c5318204677b82f7a9ec2935e049.s3tc.ctex"]
+source_file="res://Assets/Graphics/Textures/Grid Texture/purple_light_check.png"
+dest_files=["res://.godot/imported/purple_light_check.png-e5bc5ea40b4214da9a681fed2d495030.s3tc.ctex"]
 
 [params]
 

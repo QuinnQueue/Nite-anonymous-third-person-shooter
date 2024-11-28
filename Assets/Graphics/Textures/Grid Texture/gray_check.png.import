@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dydxhbvod14y5"
-path.s3tc="res://.godot/imported/gray_check.png-081f4340e1e9236a33fd1c6c8e8cb860.s3tc.ctex"
+path.s3tc="res://.godot/imported/gray_check.png-33663a81e9e7179f4c85a28b1b878e8e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Grid Texture/gray_check.png"
-dest_files=["res://.godot/imported/gray_check.png-081f4340e1e9236a33fd1c6c8e8cb860.s3tc.ctex"]
+source_file="res://Assets/Graphics/Textures/Grid Texture/gray_check.png"
+dest_files=["res://.godot/imported/gray_check.png-33663a81e9e7179f4c85a28b1b878e8e.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbixqpbj6mygh"
-path.s3tc="res://.godot/imported/yellow_light_check.png-947d52ea1ee6cb74d80e0d368429d276.s3tc.ctex"
+path.s3tc="res://.godot/imported/yellow_light_check.png-8b0548b34b53ab8c1799f5804240a49f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Grid Texture/yellow_light_check.png"
-dest_files=["res://.godot/imported/yellow_light_check.png-947d52ea1ee6cb74d80e0d368429d276.s3tc.ctex"]
+source_file="res://Assets/Graphics/Textures/Grid Texture/yellow_light_check.png"
+dest_files=["res://.godot/imported/yellow_light_check.png-8b0548b34b53ab8c1799f5804240a49f.s3tc.ctex"]
 
 [params]
 

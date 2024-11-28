@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5jih0mqnm3vm"
-path.s3tc="res://.godot/imported/green_light_dots.png-929affd13cfdd43e44be52e703eff4a8.s3tc.ctex"
+path.s3tc="res://.godot/imported/green_light_dots.png-31867d7791144a78a4c23960335e4430.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Grid Texture/green_light_dots.png"
-dest_files=["res://.godot/imported/green_light_dots.png-929affd13cfdd43e44be52e703eff4a8.s3tc.ctex"]
+source_file="res://Assets/Graphics/Textures/Grid Texture/green_light_dots.png"
+dest_files=["res://.godot/imported/green_light_dots.png-31867d7791144a78a4c23960335e4430.s3tc.ctex"]
 
 [params]
 

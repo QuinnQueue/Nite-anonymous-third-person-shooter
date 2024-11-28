@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dykjkrgij43yk"
-path.s3tc="res://.godot/imported/blue_light_check.png-295401b6903a7971bf8585143b51d9d8.s3tc.ctex"
+path.s3tc="res://.godot/imported/blue_light_check.png-b755f8e7eedcc63a068819154578a572.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Grid Texture/blue_light_check.png"
-dest_files=["res://.godot/imported/blue_light_check.png-295401b6903a7971bf8585143b51d9d8.s3tc.ctex"]
+source_file="res://Assets/Graphics/Textures/Grid Texture/blue_light_check.png"
+dest_files=["res://.godot/imported/blue_light_check.png-b755f8e7eedcc63a068819154578a572.s3tc.ctex"]
 
 [params]
 
