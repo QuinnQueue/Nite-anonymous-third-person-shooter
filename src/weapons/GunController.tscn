@@ -13,5 +13,5 @@ script = ExtResource("1_gpbo0")
 
 [node name="VBase" type="Node3D" parent="HBase"]
 
-[node name="Weapon" parent="HBase/VBase" instance=ExtResource("1_w71lw")]
+[node name="Gun" parent="HBase/VBase" instance=ExtResource("1_w71lw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23258, -0.883457, 0)
