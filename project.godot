@@ -17,3 +17,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioManager="*res://src/Autoloads/AudioManager.gd"
+
+[layer_names]
+
+3d_physics/layer_9="Hurtboxes"
+3d_physics/layer_10="Bullet"

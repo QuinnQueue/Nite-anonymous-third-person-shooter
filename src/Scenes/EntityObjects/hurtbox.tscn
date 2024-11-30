@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckf2d8dl3g0dr"]
+
+[ext_resource type="Script" path="res://src/Scenes/EntityObjects/hurtbox.gd" id="1_m0u0h"]
+[ext_resource type="Script" path="res://src/testing/Quinn/DEBUG_HurtboxShape.gd" id="2_mc8tu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_swqm8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rya1"]
+transparency = 1
+albedo_color = Color(0.8, 0.2, 0.2, 0.7)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u00ke"]
+material = SubResource("StandardMaterial3D_7rya1")
+
+[node name="Hurtboxes" type="Area3D"]
+collision_layer = 256
+collision_mask = 512
+script = ExtResource("1_m0u0h")
+
+[node name="HitboxShape" type="CollisionShape3D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("CapsuleShape3D_swqm8")
+
+[node name="Visual" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+mesh = SubResource("CapsuleMesh_u00ke")
+script = ExtResource("2_mc8tu")
+hitbox_visual_material = SubResource("StandardMaterial3D_7rya1")

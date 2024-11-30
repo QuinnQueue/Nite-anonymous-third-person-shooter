@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bl4s4wogma4j7"]
 
-[ext_resource type="Script" path="res://src/Scenes/UI/PlayerGUI.gd" id="1_gnokh"]
+[ext_resource type="Script" path="res://src/Scenes/UI/HUD.gd" id="1_gnokh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8lx2"]
 bg_color = Color(0.214968, 0.0118601, 1.8049e-08, 1)
