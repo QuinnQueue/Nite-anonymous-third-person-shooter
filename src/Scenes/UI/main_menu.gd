@@ -20,11 +20,11 @@ func _ready():
 	setup_all_buttons(placeholder_button_holder)
 
 ##Changes to start scene using a path
-func PLACEHOLDER_start(start_scene : String = start_scene):
-	if(start_scene == ""):
+func PLACEHOLDER_start(_start_scene : String = start_scene):
+	if(_start_scene == ""):
 		printerr("THERE IS NO START SCENE")
 		return
-	get_tree().change_scene_to_file(start_scene)
+	get_tree().change_scene_to_file(_start_scene)
 
 func PLACEHOLDER_options():
 	placeholder_button_holder.visible = false

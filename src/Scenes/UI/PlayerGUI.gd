@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 
 @onready var placeholder_ammo_label = %Placeholder_AmmoLabel
