@@ -11,9 +11,24 @@ func _process(delta):
 		else:
 			$CameraController.release_mouse()
 	
-	if Input.is_action_pressed("shoot"):
-		$HBase/VBase/Gun.shoot()
+	var gun = get_gun()
+	if gun:
+		if Input.is_action_pressed("shoot"):
+			gun.shoot_pressed()
+		if Input.is_action_just_released("shoot"):
+			gun.shoot_released()
 	
 	if Input.is_action_pressed("rmb"):
 		$HBase.rotation.y = lerp_angle($HBase.rotation.y, $CameraController.rotation.y, weapon_aim_speed)
 		$HBase/VBase.rotation.x = lerp_angle($HBase/VBase.rotation.x, $CameraController/VBase.rotation.x, weapon_aim_speed)
+
+
+func get_gun():
+	return get_node_or_null("HBase/VBase/Gun")
+
+
+func set_gun(gun_inst):
+	assert($HBase/VBase.get_child_count() == 0)
+	
+	$HBase/VBase.add_child(gun_inst)
+	gun_inst.name = "Gun"
