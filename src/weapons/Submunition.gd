@@ -7,8 +7,6 @@ func throw():
 	$Timer.timeout.connect(func(): is_primed = true)
 
 
-
-
 func _on_body_entered(body):
 	if is_primed:
 		# boom
@@ -16,3 +14,5 @@ func _on_body_entered(body):
 		
 		for hitbox in hitboxes:
 			hitbox.hit()
+	
+	queue_free()

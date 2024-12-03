@@ -7,12 +7,14 @@ radius = 0.2
 height = 0.4
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_l2p66"]
-radius = 4.20815
+radius = 8.21898
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_b5f63"]
 radius = 0.204804
 
 [node name="Submunition" type="RigidBody3D"]
+max_contacts_reported = 1
+contact_monitor = true
 script = ExtResource("1_fccxc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
