@@ -9,10 +9,11 @@ size = Vector3(0.235, 0.235, 1)
 script = ExtResource("1_r6fl1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.570938)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34435, 0, -1.07467)
 mesh = SubResource("BoxMesh_itdhv")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34435, 0, -0.503735)
 target_position = Vector3(0, 0, -1000)
 collision_mask = 2
 collide_with_areas = true
