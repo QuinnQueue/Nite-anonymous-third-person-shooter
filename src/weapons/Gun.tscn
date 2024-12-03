@@ -18,3 +18,17 @@ target_position = Vector3(0, 0, -1000)
 collision_mask = 2
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="ReticlePlaceholder" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.812021, 0, 0.231735, 1)

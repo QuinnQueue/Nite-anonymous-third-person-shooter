@@ -1,4 +1,6 @@
 extends Node3D
+## ReticlePlaceholder is not meant for production.
+## It is more just meant for debugging!
 
 func shoot_pressed():
 	$RayCast3D.force_raycast_update()
@@ -9,3 +11,7 @@ func shoot_pressed():
 
 func shoot_released():
 	pass
+
+
+func get_weapon_offset():
+	return $RayCast3D.global_position - self.global_position
