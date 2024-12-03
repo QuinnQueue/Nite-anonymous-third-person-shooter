@@ -53,3 +53,10 @@ func set_fov(deg : float) -> void:
 
 func get_fov() -> float:
 	return $VBase/Camera3D.fov
+
+
+func get_camera_centered_target():
+	$VBase/Camera3D/RayCast3D.force_raycast_update()
+	if $VBase/Camera3D/RayCast3D.is_colliding():
+		return $VBase/Camera3D/RayCast3D.get_collision_point()
+	return false

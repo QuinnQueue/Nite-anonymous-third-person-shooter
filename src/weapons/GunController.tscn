@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3bqagvque4i3"]
+[gd_scene load_steps=3 format=3 uid="uid://c3bqagvque4i3"]
 
 [ext_resource type="Script" path="res://src/weapons/GunController.gd" id="1_gpbo0"]
 [ext_resource type="PackedScene" uid="uid://bmf3lcj8tnee8" path="res://src/camera/CameraController.tscn" id="1_t2m24"]
-[ext_resource type="PackedScene" uid="uid://ckiiq4hwuw6fr" path="res://src/weapons/Gun.tscn" id="1_w71lw"]
 
 [node name="GunController" type="Node3D"]
 script = ExtResource("1_gpbo0")
@@ -13,5 +12,4 @@ script = ExtResource("1_gpbo0")
 
 [node name="VBase" type="Node3D" parent="HBase"]
 
-[node name="Gun" parent="HBase/VBase" instance=ExtResource("1_w71lw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23258, -0.883457, 0)
+[node name="Looker" type="Node3D" parent="."]
