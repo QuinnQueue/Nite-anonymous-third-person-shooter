@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhiu476fm5vyk"]
+
+[ext_resource type="Script" path="res://src/weapons/Grenade.gd" id="1_nt2l3"]
+
+[node name="Thrower" type="Node3D"]
+script = ExtResource("1_nt2l3")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.673387, -0.73929, 0, 0.73929, 0.673387, 0, 0, -0.658638)
