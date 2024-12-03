@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3bqagvque4i3"]
+
+[ext_resource type="Script" path="res://src/weapons/GunController.gd" id="1_gpbo0"]
+[ext_resource type="PackedScene" uid="uid://bmf3lcj8tnee8" path="res://src/camera/CameraController.tscn" id="1_t2m24"]
+
+[node name="GunController" type="Node3D"]
+script = ExtResource("1_gpbo0")
+
+[node name="CameraController" parent="." instance=ExtResource("1_t2m24")]
+
+[node name="HBase" type="Node3D" parent="."]
+
+[node name="VBase" type="Node3D" parent="HBase"]
+
+[node name="Looker" type="Node3D" parent="."]

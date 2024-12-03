@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqkqjgx0mdq3d"]
+
+[ext_resource type="PackedScene" uid="uid://c3bqagvque4i3" path="res://src/weapons/GunController.tscn" id="1_o7aeg"]
+[ext_resource type="Texture2D" uid="uid://dqqpbjrjb0x0j" path="res://Assets/Graphics/Textures/Grid Texture/orange_check.png" id="2_bjo30"]
+[ext_resource type="Texture2D" uid="uid://bbixqpbj6mygh" path="res://Assets/Graphics/Textures/Grid Texture/yellow_light_check.png" id="2_t1onl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wb3gv"]
+albedo_texture = ExtResource("2_t1onl")
+
+[sub_resource type="BoxMesh" id="BoxMesh_atots"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdane"]
+albedo_texture = ExtResource("2_bjo30")
+
+[sub_resource type="BoxMesh" id="BoxMesh_osjcm"]
+material = SubResource("StandardMaterial3D_wdane")
+size = Vector3(10, 1, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_466tk"]
+data = PackedVector3Array(-5, 0.5, 5, 5, 0.5, 5, -5, -0.5, 5, 5, 0.5, 5, 5, -0.5, 5, -5, -0.5, 5, 5, 0.5, -5, -5, 0.5, -5, 5, -0.5, -5, -5, 0.5, -5, -5, -0.5, -5, 5, -0.5, -5, 5, 0.5, 5, 5, 0.5, -5, 5, -0.5, 5, 5, 0.5, -5, 5, -0.5, -5, 5, -0.5, 5, -5, 0.5, -5, -5, 0.5, 5, -5, -0.5, -5, -5, 0.5, 5, -5, -0.5, 5, -5, -0.5, -5, 5, 0.5, 5, -5, 0.5, 5, 5, 0.5, -5, -5, 0.5, 5, -5, 0.5, -5, 5, 0.5, -5, -5, -0.5, 5, 5, -0.5, 5, -5, -0.5, -5, 5, -0.5, 5, 5, -0.5, -5, -5, -0.5, -5)
+
+[node name="TestGunController2" type="Node3D"]
+
+[node name="GunController" parent="." instance=ExtResource("1_o7aeg")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.785995, 0)
+material_override = SubResource("StandardMaterial3D_wb3gv")
+mesh = SubResource("BoxMesh_atots")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.06235, 0)
+mesh = SubResource("BoxMesh_osjcm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_466tk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.553603, -0.665976, -0.5, 0.812422, 0.29995, 0.5, -0.183013, -0.683013, 0.707107, 0, 3, 0)
+shadow_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 329.0
+offset_bottom = 57.0
+text = "Press ESC to capture mouse
+Hold RMB to aim weapon"
