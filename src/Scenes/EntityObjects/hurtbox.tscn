@@ -9,7 +9,7 @@
 transparency = 1
 albedo_color = Color(0.8, 0.2, 0.2, 0.7)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_u00ke"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cusrb"]
 material = SubResource("StandardMaterial3D_7rya1")
 
 [node name="Hurtboxes" type="Area3D"]
@@ -23,6 +23,6 @@ shape = SubResource("CapsuleShape3D_swqm8")
 
 [node name="Visual" type="MeshInstance3D" parent="."]
 unique_name_in_owner = true
-mesh = SubResource("CapsuleMesh_u00ke")
+mesh = SubResource("CapsuleMesh_cusrb")
 script = ExtResource("2_mc8tu")
 hitbox_visual_material = SubResource("StandardMaterial3D_7rya1")
