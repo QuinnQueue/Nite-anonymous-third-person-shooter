@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Base Project"
+config/name="Nite"
 run/main_scene="res://src/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioManager="*res://src/Autoloads/AudioManager.gd"
 
 [input]
 
