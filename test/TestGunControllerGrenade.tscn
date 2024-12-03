@@ -50,7 +50,7 @@ offset_right = 329.0
 offset_bottom = 57.0
 text = "Press ESC to capture mouse
 Hold RMB to aim weapon
-Press LMB to shoot (pressing and holding will prime the throw but wait until you release)"
+Press and hold LMB to charge the grenade throw, release to throw! (will not throw if not charged to at least ~25%)"
 
 [node name="Target" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3486, -0.294615, -24.8829)
