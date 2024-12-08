@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhiu476fm5vyk"]
+
+[ext_resource type="Script" path="res://src/weapons/Grenade.gd" id="1_nt2l3"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_7srfr"]
+inner_radius = 0.25
+outer_radius = 0.5
+
+[node name="Thrower" type="Node3D"]
+script = ExtResource("1_nt2l3")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.673387, -0.73929, 0, 0.73929, 0.673387, 0, 0, -0.658638)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Marker3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("TorusMesh_7srfr")
+skeleton = NodePath("../..")
+
+[node name="ThrowTimer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[node name="ProgressBarPlaceholder" type="ProgressBar" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -107.0
+offset_right = 116.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[connection signal="timeout" from="ThrowTimer" to="." method="_on_throw_timer_timeout"]

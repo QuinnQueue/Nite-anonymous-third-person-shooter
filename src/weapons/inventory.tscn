@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cub6cbsq3vxsx"]
+
+[ext_resource type="Script" path="res://src/weapons/inventory.gd" id="1_njq28"]
+
+[node name="Inventory" type="Node3D"]
+script = ExtResource("1_njq28")

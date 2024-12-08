@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmf3lcj8tnee8"]
+
+[ext_resource type="Script" path="res://src/camera/CameraController.gd" id="1_lov20"]
+
+[node name="CameraController" type="Node3D"]
+script = ExtResource("1_lov20")
+
+[node name="VBase" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="VBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="RayCast3D" type="RayCast3D" parent="VBase/Camera3D"]
+target_position = Vector3(0, 0, -4000)
+
+[node name="RayCast3D" type="RayCast3D" parent="VBase"]
+target_position = Vector3(0, 1, 1)
