@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody3D
 
 const JUMP_VELOCITY = 4.5
@@ -14,10 +15,15 @@ var is_running = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-
+@onready
+var state_machine = $State_Machine
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	# Initialize the state machine, passing a reference of the player to the states,
+	# that way they can move and react accordingly
+	state_machine.init(self)
+
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -29,44 +35,22 @@ func _input(event):
 		camera_mount.rotate_x(deg_to_rad(-event.relative.y * vertical_sensitvity))
 		
 func _physics_process(delta):
+	state_machine.process_physics(delta)
+	# This is currently not active
 	if Input.is_action_pressed("running"):
 		speed = running_speed
 		is_running = true
 	else:
 		speed = walking_speed
 		is_running = false
-		
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y -= gravity * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	var input_dir = Input.get_vector("left", "right", "forward", "backward")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		if is_running:
-			if(animation_player.current_animation != "running"):
-				animation_player.play("running")
-		else:
-			if(animation_player.current_animation != "walking" ):
-				animation_player.play("walking")
-		velocity.x = direction.x * speed
-		velocity.z = direction.z * speed
-		
-		# model will look at direction we are walking
-		visuals.look_at(position + direction)
-	else:
-		if(animation_player.current_animation != "idle"):
-			animation_player.play("idle")
-		velocity.x = move_toward(velocity.x, 0, speed)
-		velocity.z = move_toward(velocity.z, 0, speed)
-
-	move_and_slide()
 
 
 func get_camera_transform():
 	return camera_mount.get_child(0).transform()
+	
+func _unhandled_input(event: InputEvent) -> void:
+	state_machine.process_input(event)
+
+
+func _process(delta: float) -> void:
+	state_machine.process_frame(delta)
